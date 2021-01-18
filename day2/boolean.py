@@ -14,3 +14,9 @@ y = 0.000000000000000000000009
 
 print(bool(x))
 print(bool(y))
+
+name = "Przemek"
+empty_string = ""
+
+print(bool(name))
+print(bool(empty_string))
