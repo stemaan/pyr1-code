@@ -31,6 +31,7 @@ class Bicycle(Vehicle):
 
 class MountainBicycle(Bicycle):
     def drive(self):
+        super().drive()
         print('Sometimes hiking always biking')
 
 
@@ -57,3 +58,7 @@ if __name__ == '__main__':
     canondale.ring()
     canondale.drive()
     canondale.stop()
+
+    print('*' * 8)
+    print(issubclass(MountainBicycle, Vehicle))
+    print(MountainBicycle.__mro__)
