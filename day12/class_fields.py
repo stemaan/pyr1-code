@@ -44,7 +44,8 @@ class Employee(Person):
             cls.annual_salary_increase = value
 
     def increase_salary(self):
-        self.salary = self.salary + Employee.annual_salary_increase * self.salary
+        # Employee/Developer.annual_salary_increase
+        self.salary = self.salary + self.__class__.annual_salary_increase * self.salary
 
 
 class Developer(Employee):
@@ -52,6 +53,10 @@ class Developer(Employee):
 
     def free_fruit_wednesdays(self):
         pass
+
+
+class Tester(Employee):
+    annual_salary_increase = 0.08
 
 
 if __name__ == '__main__':
@@ -112,3 +117,6 @@ if __name__ == '__main__':
     print(pythonista.salary)
     pythonista.increase_salary()
     print(pythonista.salary)
+
+    qa = Tester('Anna', 'Nowak', 'asda@asd.com', 123123, 'QA')
+    qa.increase_salary()
