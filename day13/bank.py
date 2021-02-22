@@ -43,6 +43,11 @@ class Account:
         self.withdraw(amount)
         to.deposit(amount)
 
+    def increase_withdrawal_limit(self, new_limit):
+        # 2000 limitu, remaining_withdrawal_limit = 2000?
+        self.monthly_withdrawal_limit = new_limit
+        self.remaining_withdrawal_limit = self.monthly_withdrawal_limit
+
 
 if __name__ == '__main__':
     kowalski = Client("Jan", "Kowalski", 123456789)
